@@ -25,8 +25,9 @@ int getSum(int i , int low ,int high , int l , int r){
             // now send the same lazy 
             lazy[2*i+1] += lazy[i];
             lazy[2*i+2] += lazy[i];
-            lazy[i] = 0;
+            
         }
+        lazy[i] = 0;
     }
     if(high<l || r<low) return 0;
     if(low>=l && high<=r) {
@@ -48,8 +49,9 @@ void updateRange(int i , int lo , int hi , int l ,int r,int val){
             // now send the same lazy 
             lazy[2*i+1] += lazy[i];
             lazy[2*i+2] += lazy[i];
-            lazy[i] = 0;
+            
         }
+        lazy[i] = 0;
     }
 
     if(l>hi || r<lo) return;
